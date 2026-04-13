@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LogoRestaurante from '../assets/logo.svg?react'
 
-function Navbar(){
+function Navbar({setLogin, setMostrarForm}){
      const enlaces = [
         { name: 'Inicio', path: '/' },
         { name: 'Menú', path: '/menu' },
@@ -13,7 +13,7 @@ function Navbar(){
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 40);
@@ -46,10 +46,14 @@ function Navbar(){
 
                 {/* Desktop Right */}
                 <div className="hidden md:flex items-center gap-4">
-                    <button className={`hover:scale-105 cursor-pointer px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-amber-600" : "bg-amber-200 text-black"}`}>
+                    <button className={`hover:scale-105 cursor-pointer px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-amber-600" : "bg-amber-200 text-black"}`}
+                        onClick={()=>{setLogin(true); setMostrarForm(true)}}
+                    >
                         Iniciar Sesión
                     </button>
-                    <button className={`hover:scale-105 border px-8 py-2.5 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-amber-100' : 'text-amber-200'} transition-all`}>
+                    <button className={`hover:scale-105 border px-8 py-2.5 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-amber-100' : 'text-amber-200'} transition-all`}
+                        onClick={()=>{setLogin(false); setMostrarForm(true)}}
+                    >
                         Registrarse
                     </button>
                 </div>

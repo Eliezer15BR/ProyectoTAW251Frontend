@@ -22,6 +22,7 @@ function Home(){
             descripcion:"Recetas que han pasado de generación en generación."
         }
     ]
+    
     return (
         <>
             <div className="w-full"> 
@@ -77,7 +78,8 @@ function Home(){
                     <Link to='/menu' className="inline-block px-8 py-3 bg-black text-white rounded-full hover:scale-105 transition-all duration-300"> 
                         Ordenar 
                     </Link> 
-                </section> 
+                </section>
+                
             </div>
         </>
     )

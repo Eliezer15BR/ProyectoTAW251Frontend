@@ -1,4 +1,20 @@
+import CardDescripcion from "../components/CardDescripcion";
+
 function About() {
+    const valores=[
+        {
+            titulo:'🔥 Pasión',
+            descripcion:'Cada plato es preparado con dedicación y amor por la cocina.'
+        },
+        {
+            titulo:'🌱 Calidad',
+            descripcion:'Ingredientes frescos y seleccionados cuidadosamente.'
+        },
+        {
+            titulo:'🤝 Experiencia',
+            descripcion:'Más que comida, creamos momentos inolvidables.'
+        }
+    ]
   return (
     <>
       <section className="h-[60vh] bg-[url('https://images.unsplash.com/photo-1552566626-52f8b828add9')] bg-cover bg-center flex items-center justify-center relative">
@@ -33,26 +49,9 @@ function About() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">🔥 Pasión</h3>
-            <p className="text-gray-600">
-              Cada plato es preparado con dedicación y amor por la cocina.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2">🌱 Calidad</h3>
-            <p className="text-gray-600">
-              Ingredientes frescos y seleccionados cuidadosamente.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2">🤝 Experiencia</h3>
-            <p className="text-gray-600">
-              Más que comida, creamos momentos inolvidables.
-            </p>
-          </div>
+            {valores.map(({titulo,descripcion})=>(
+                <CardDescripcion titulo={titulo} descripcion={descripcion}/>
+            ))}
         </div>
       </section>
 
