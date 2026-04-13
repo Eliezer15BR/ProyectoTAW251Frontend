@@ -10,7 +10,7 @@ function Footer() {
                 }
             `}</style>
             
-            <footer className="flex flex-col items-center justify-center w-full py-20 bg-gradient-to-b from-amber-800 to-amber-600 text-white/70">
+            <footer className="flex flex-col items-center justify-center w-full py-20 bg-linear-to-b from-amber-800 to-amber-600 text-white/70">
                 <LogoRestaurante className='text-white h-40 w-40'/>
                 <p className="mt-4 text-center">Copyright © 2026 All rights reservered.</p>
                 <div className="flex items-center gap-4 mt-5">
