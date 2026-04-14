@@ -5,8 +5,10 @@ import Menu from "./pages/Menu";
 import Catering from "./pages/Catering";
 import About from "./pages/About";
 import Contacto from "./pages/Contacto";
+import {CarroProvider} from './context/CarroContext';
 function App() {
   return (
+    <CarroProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
@@ -18,6 +20,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </CarroProvider>
   )
 }
 

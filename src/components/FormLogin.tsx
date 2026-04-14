@@ -39,7 +39,7 @@ function FormLogin({login, setMostrarForm, setLogin}:Props){
                     ? <input className='w-full bg-transparent border mb-3 border-gray-500/30 outline-none rounded-full py-2.5 px-4' type="text" placeholder='Ingrese de nuevo la contraseña' required/>
                     : <></>
                 }
-                <button type="submit" className="w-full mb-3 bg-amber-700 py-2.5 rounded-full text-white cursor-pointer">
+                <button type="submit" className="w-full mb-3 bg-amber-700 py-2.5 rounded-full text-white cursor-pointer btn-animated">
                     {(login)?"Ingresar":"Registrarse"}
                 </button>
             </form>
@@ -55,7 +55,7 @@ function FormLogin({login, setMostrarForm, setLogin}:Props){
                     }
                 </button>
             </p>
-            <button type="button" className="w-full flex items-center gap-2 justify-center my-3 bg-white border border-gray-500/30 py-2.5 rounded-full text-gray-800 cursor-pointer">
+            <button type="button" className="w-full flex items-center gap-2 justify-center my-3 bg-white border border-gray-500/30 py-2.5 rounded-full text-gray-800 cursor-pointer btn-animated">
                 <img className="h-4 w-4" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/login/googleFavicon.png" alt="googleFavicon" />
                 Ingresar con Google
             </button>

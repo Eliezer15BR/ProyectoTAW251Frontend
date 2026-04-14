@@ -1,5 +1,5 @@
 import CardDescripcion from "../components/CardDescripcion";
-
+import logoMain from '../assets/logoMain.png'
 function About() {
     const valores=[
         {
@@ -24,7 +24,8 @@ function About() {
         </h1>
       </section>
 
-      <section className="py-20 px-6 md:px-20 text-center bg-white">
+      <section className="py-10 px-6 md:px-20 text-center bg-white flex items-center flex-col justify-center">
+        <img src={logoMain} alt="Logo del restaurante" className="h-40 w-40"/>
         <h2 className="text-3xl md:text-4xl font-custom mb-6">
           El Fuego Sagrado
         </h2>

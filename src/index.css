@@ -6,3 +6,11 @@
 html{
     background-color: black;
 }
+.btn-animated{
+    transition: all;
+    transition-duration: 300ms;
+}
+.btn-animated:hover{
+    transform: scale(1.05);
+    transition-duration: 300ms;
+}
